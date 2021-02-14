@@ -216,7 +216,7 @@ small {
 
 .fa-quote-left {
   font-size: 2rem;
-  color: #ff523b;
+  color: rgb(255, 82, 59);
 }
 
 .col-3 p {
@@ -304,30 +304,66 @@ ul {
   display: none;
 }
 
-/* media query for menu */
-
 @media only screen and (max-width: 800px) {
   nav ul {
-    position: absolute;
+    position: fixed;
+    text-align: center;
+    display: none;
     top: 70px;
-    left: 0;
-    background: #333;
-    width: 100%;
+    right: 0;
+    background: rgba(255, 82, 59, 0.589);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 0.5em;
+    z-index: 99;
   }
 
-  nav u li {
+  .navbar__show {
+    display: inline-block;
+    animation: slideMe 0.5s ease-in;
+  }
+
+  .navbar__noshow {
+    transition: display 1s;
+    animation: slideOut 0.5s ease-out;
+  }
+
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(999px);
+    }
+  }
+
+  @keyframes slideMe {
+    0% {
+      transform: translateX(80px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  nav ul li {
     display: block;
-    margin-right: 50px;
-    margin-bottom: 10px;
-    margin-top: 10px;
   }
 
-  nav u li a {
+  nav ul li a {
     color: #fff;
   }
 
   .menu-icon {
     display: block;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    text-align: center;
   }
 }

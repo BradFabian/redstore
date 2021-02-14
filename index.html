@@ -19,7 +19,7 @@
                 <img src="./images/logo.png" alt="" srcset="">
             </div>
             <nav>
-                <ul>
+                <ul class="MenuItems">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Products</a></li>
                     <li><a href="#">About</a></li>
@@ -28,7 +28,7 @@
                 </ul>
             </nav>
             <img class="cart" src="./images/cart.png" alt="" srcset="">
-            <img class="cart" src="./images/menu.png" class="menu-icon" alt="" srcset="">
+            <img  class="menu-icon"  src="./images/menu.png" alt="" srcset="">
         </div>
 
         <div class="row">
@@ -227,6 +227,32 @@
                 </div>
 
             </section>
+
+            <script>
+                let MenuItems = document.querySelector(".MenuItems");
+                
+              
+
+                function classToggle(){
+                
+
+                 if(MenuItems.classList.contains('navbar__noshow')){
+                     MenuItems.classList.remove('navbar__noshow')
+                    MenuItems.classList.add('navbar__show')
+                 } else {
+                    
+                    MenuItems.classList.remove('navbar__show')
+                    MenuItems.classList.add('navbar__noshow')
+                 };
+                 
+                }
+
+                document.querySelector('.menu-icon').addEventListener('click', classToggle);
+
+
+
+                
+            </script>
 
 </body>
 </html>
