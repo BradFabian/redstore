@@ -202,6 +202,32 @@ small {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.5s;
+  position: relative;
+  height: 100%;
+}
+
+.testimonial .col-3::after {
+  content: "\201C";
+  color: #c7c4c4c7;
+  position: absolute;
+  font-size: 6em;
+  white-space: nowrap;
+  right: 5%;
+  top: 10%;
+  z-index: -1;
+  height: 12%;
+}
+
+.testimonial .col-3::before {
+  content: "\201D";
+  color: #c7c4c4c7;
+  position: absolute;
+  font-size: 6em;
+  white-space: nowrap;
+  height: 12%;
+  left: 5%;
+  top: -18px;
+  z-index: -1;
 }
 
 .testimonial .col-3 img {
